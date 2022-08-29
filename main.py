@@ -50,9 +50,6 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature, wind = get_weather()
-data = {"diqu":{"value":city, "color":get_random_color()},"weather":{"value":wea, "color":get_random_color()},"temperature":{"value":temperature, "color":get_random_color()},"wind":{"value":wind, "color":get_random_color()},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday(), "color":get_random_color()},"words":{"value":get_words(), "color":get_random_color()}}
-data1 = {"riqi":{"value":today, "color":get_random_color()},"xingqi":{"value":week, "color":get_random_color()}}
+data = {"diqu":{"value":city, "color":get_random_color()},"riqi":{"value":today, "color":get_random_color()},"xingqi":{"value":week, "color":get_random_color()},"weather":{"value":wea, "color":get_random_color()},"temperature":{"value":temperature, "color":get_random_color()},"wind":{"value":wind, "color":get_random_color()},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday(), "color":get_random_color()},"words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
-res1 = wm.send_template(user_id, template_id, data)
 print(res)
-print(res1)
