@@ -8,7 +8,7 @@ import random
 
 today = datetime.now()
 weekList = ["星期一","星期二","星期三","星期四","星期五","星期六","星期七"]
-week = weekList[datetime.now().weekday()]
+week = weekList[today.weekday()]
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
